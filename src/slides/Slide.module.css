@@ -1,0 +1,154 @@
+/* Common Slide Styles */
+.centerLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 40px;
+}
+
+.contentLayout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px 40px;
+}
+
+.slideHeader {
+  margin-bottom: 40px;
+}
+
+.slideTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.slideContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Specific to Cover */
+.coverVisual {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.glowOrb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.4) 0%, rgba(10, 10, 42, 0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+  animation: pulse 3s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+  100% { transform: translate(-50%, -50%) scale(1.3); opacity: 1; }
+}
+
+.coverIcon {
+  color: var(--color-purple-lighter);
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.6));
+}
+
+.mainTitle {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.description {
+  font-size: 1.3rem;
+  color: var(--color-purple-lighter);
+  background: rgba(124, 58, 237, 0.1);
+  padding: 12px 35px;
+  border-radius: 30px;
+  margin-bottom: 50px;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 20px;
+}
+
+/* Grid Layouts */
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  height: 100%;
+}
+
+.grid12 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  align-content: center;
+  height: 100%;
+}
+
+/* Cards */
+.card {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cardIcon {
+  color: var(--color-purple-light);
+  margin-bottom: 25px;
+}
+
+.cardTitle {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.cardText {
+  color: var(--color-text-muted);
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Big Numbers */
+.bigNumberCard {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.bigNumber {
+  font-size: 6rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  background: linear-gradient(to bottom right, #fff, var(--color-purple-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  margin-bottom: 20px;
+}

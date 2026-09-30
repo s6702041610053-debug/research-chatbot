@@ -1,0 +1,75 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 100;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.logoText {
+  color: white;
+}
+
+.menu {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  max-width: 75%;
+}
+
+.menu::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.navItem {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.navItem:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.navItem.active {
+  color: var(--color-purple-lighter);
+  font-weight: 500;
+  background: rgba(124, 58, 237, 0.15);
+}
+
+.fullscreenBtn {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.fullscreenBtn:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
