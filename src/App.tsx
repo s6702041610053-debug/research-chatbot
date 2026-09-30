@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import NavigationBar from './components/NavigationBar';
 import ProgressBar from './components/ProgressBar';
 import Slide01Cover from './slides/Slide01Cover';
