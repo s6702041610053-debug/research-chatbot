@@ -2,11 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 40px;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
+  padding: 10px 30px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   z-index: 100;
+  height: 60px;
 }
 
 .logo {
@@ -14,22 +15,101 @@
   font-weight: 700;
   font-size: 1.2rem;
   letter-spacing: 1px;
+  width: 200px;
+  flex-shrink: 0;
 }
 
 .logoText {
   color: white;
 }
 
-.menu {
+.centerMenu {
+  flex: 1;
   display: flex;
-  gap: 15px;
-  overflow-x: auto;
-  scrollbar-width: none; /* Firefox */
-  max-width: 75%;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+  margin: 0 20px;
 }
 
-.menu::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
+/* Dropdown */
+.dropdownContainer {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.dropdownTrigger {
+  background: rgba(124, 58, 237, 0.2);
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.dropdownTrigger:hover {
+  background: rgba(124, 58, 237, 0.3);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: var(--color-bg-navy);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 250px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  z-index: 200;
+}
+
+.dropdownItem {
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.dropdownItem:hover {
+  background: rgba(255,255,255,0.05);
+  color: white;
+}
+
+.dropdownItem.activeChapter {
+  color: var(--color-purple-lighter);
+  font-weight: 500;
+}
+
+/* Submenu */
+.submenu {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  flex: 1;
+  mask-image: linear-gradient(to right, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);
+}
+
+.submenu::-webkit-scrollbar {
+  display: none;
 }
 
 .navItem {
@@ -54,6 +134,15 @@
   color: var(--color-purple-lighter);
   font-weight: 500;
   background: rgba(124, 58, 237, 0.15);
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  justify-content: flex-end;
+  flex-shrink: 0;
 }
 
 .fullscreenBtn {
